@@ -11,10 +11,26 @@
 <!-- Internal CSS -->
 <style>
 
+   /* The CSS element Selector */
     h1{
         color: chartreuse;
         background-color: black;
     } 
+
+    /* The CSS id Selector  */
+    #id{
+
+        color: blueviolet;
+    }
+    
+
+    /* The CSS class Selector */
+
+    .class{
+        color: forestgreen;
+    }
+
+
 
 </style>
 
@@ -26,8 +42,7 @@
     <hr> -->
 
     <!-- inline css  -->
-    <!-- 如果有重複的style，後面的style會先執行
-        盡量不要寫在lnline，不好維護 -->
+    <!-- 盡量不要寫在lnline，不好維護 -->
     
     <!-- <h1 style="color: blue;">
     
@@ -44,8 +59,26 @@
     要把 body 上面跟內部的style先mark掉，才會正常跑出外部css的設定值
     -->
 <h1>
-    hello 外部
+    hello 外部 <br>
+    它的style被mark掉了，所以看到的是寫在body上面的style
 </h1>
+<hr>
+
+<h1 id="id">
+    hello ID 
+</h1>
+<hr>
+
+<h1 class="class">
+    hello class
+</h1>
+
+
+<!-- style 先後執行權重
+    如果有重複的style，後面的style會先執行
+    id > class > element
+    優先都先使用class，id保留在最後在使用，因為id最強，可以做為最後手段來進行控制
+-->
 
 
 </body>
