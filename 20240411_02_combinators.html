@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+</head>
+
+<style>
+  /* , 都選 
+  p , div {
+
+    color:green;
+  }
+
+
+/* >  後代一層*/
+
+/* div > p {
+    color: darkgreen;
+}
+
+.my-parent {
+    color:palevioletred;
+} */
+
+/* 空格 後代全部*/
+ /* div p {
+     color: blue;
+}  */
+
+/* ~ 兄弟姐妹同輩 全部 */
+/* .my-parent ~ div {
+
+    color: brown;
+}
+
+.my-parent{
+    color: blueviolet;
+} */
+
+/* + 兄弟姐妹同層 鄰近的 */
+#liu+div {
+ 
+    color: darkorange;
+
+}
+
+</style>
+
+<body>
+    
+    <div>
+        <div class="my-parent" id="liu">
+            劉備
+        </div>
+        <div>
+            劉備分身1
+        </div>
+        <div>
+            劉備分身2
+        </div>
+            <P>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;劉禪
+            </P>
+   </div>
+   
+   <div>
+        <div class="my-parent">
+            關羽
+        </div>
+            <P>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;關平
+            </P>
+            <P>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;關興
+             <div>
+                <h1>
+                    <p>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;關小星
+                    </p>
+                </h1>
+             </div>
+        </P>
+   </div>
+   
+   <div>
+       <div class="my-parent">
+            張飛    
+        </div>
+            <P>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;張苞
+            </P>
+   </div>
+
+
+</body>
+</html>
