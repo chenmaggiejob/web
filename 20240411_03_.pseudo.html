@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+        }
+        
+        /*hover 滑鼠移過去後會變更成指定的狀態，ex:變色  */
+        .box:hover{
+            width: 600px;
+            background-color: lightpink;
+        }
+        
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        tr,
+        td,
+        th{
+            border: 1px solid black;
+        }
+        .peric{
+            text-align: left;
+        }
+
+        .price::before{
+            content: '$';
+        } 
+
+        .price::after{
+            content: '元';
+        }
+
+        tr:nth-child(even){
+            background-color:lightgray;
+        }
+        
+        tr:hover{
+            background-color: burlywood;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="box">
+        Pseudo-classes
+    </div>
+    <hr>
+    <p>Pseudo-elements
+    </p>
+    <table>
+        <tr>
+                <th width="15%">ID</th>
+                <th width="30%">商品名稱</th>
+                <th>價格</th>
+        </tr>
+        <tr>
+                <td>1</td>
+                <td>咖啡</td>
+                <td class="price">100</td>
+        </tr>
+        <tr>
+                <td>2</td>
+                <td>奶茶</td>
+                <td  class="price">90</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>巧克力</td>
+            <td  class="price">80</td>
+    </tr>
+    </table>
+    
+</body>
+</html>
