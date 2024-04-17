@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+
+        .box-ralative {
+            position: relative; 
+            left: 100px;
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        .box-fixed {
+            position: fixed;
+            right: 50%;
+            bottom: 50%;;
+            background-color: lightgray;
+        }
+
+        .box-absolute {
+            position: absolute;
+            left: 100px;
+            width: 150px;
+            line-height: 50px;/*文字垂直置中*/
+            background-color: lightcoral;
+            text-align: center;
+        }
+
+        .box-static{
+            position: static;
+            width: 300px;
+            height: 200px;
+            background-color: blanchedalmond;
+        }
+
+
+        .box-sticky{
+            position: sticky;
+            top:0px;
+            width: 100%;
+            height: 50px;
+            background-color:lightseagreen;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="box-ralative">
+     <h3>會移動的框框</h3>   
+    </div>
+
+    <div class="box-sticky">
+        <h3>會黏住的框</h3>
+    </div>
+
+    <div class="box-fixed">
+        <h3>固定的框框</h3>
+    </div>
+
+    <div class="box-static">
+        <h3>不會動的外框</h3>
+        <div class="box-absolute">
+            <h3>框框中的框框</h3>
+        </div>
+    </div>
+    
+    
+    
+
+    
+</body>
+</html>
