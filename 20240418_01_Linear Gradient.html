@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear-gradient</title>
+    <style>
+        .div1 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(red,orange,yellow);
+        }
+
+        .div2 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(90deg,red,orange,yellow);
+        }
+
+        .div3 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(red 30%,orange,yellow);
+        }
+
+        .div4 {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient( 45deg, red 10%, orange 10%, orange 90%, red 90%)
+        }
+
+        .div5 {
+            width: 300px;
+            height: 300px;
+            background-image: repeating-linear-gradient( red, orange 10%);
+        }
+
+        .div6 {
+            width: 300px;
+            height: 300px;
+            background-image: repeating-linear-gradient(45deg, black 0px, black 20px, orange 20px, orange 40px);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>線性漸層 linear-gradient</h1>
+    
+    <p>顏色至少要2個以上，沒有上限</p>
+    <div class="div1"></div>
+    <hr>
+    
+    <h3>角度參數</h3>
+    <ul>
+        <li>to top = 0deg / 360deg</li>
+        <li>to right = 90deg</li>
+        <li>to bottom = 180deg</li>
+        <li>to left = 270deg</li>
+    </ul>
+
+    <div class="div2"></div>
+    <hr>
+    
+    <h3>漸變位置調整</h3>
+    <ul>
+        <li>顏色位置可以是 % 或是 px</li>
+    </ul>
+  
+    <div class="div3"></div>
+    <br><br>
+    <ul>
+    <li>顏色各佔50%時，會出現明顯的分界線</li>
+    </ul>
+    <div class="div4"></div>
+    <br><br>
+    <ul>
+        <li>如果漸層不夠大的話，會重複填滿區域</li>
+    </ul>
+    <div class="div5"></div>
+    <br><br>
+
+    <div class="div6"></div>
+        
+
+</body>
+</html>

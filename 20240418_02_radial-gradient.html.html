@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radial-gradient</title>
+    
+    <style>
+        .div1 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red,orange);
+        }
+
+        .div2 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red 80%,orange);
+        }
+
+        .div3 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red 50%,orange 50%);
+        }
+
+        .div4 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(ellipse 100px 50px, red, orange);
+        }
+
+        .div5 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(ellipse 100px 50px at right 30px, red, orange);
+        }
+    </style>
+</head>
+<body>
+    <h1>放射漸層</h1>
+    <ul>
+        <li>沒有角度</li>
+        <li>從中心開始往外放射</li>
+    </ul>
+    <div class="div1"></div>
+    <br>
+    <div class="div2"></div>
+    <br>
+    <div class="div3"></div>
+    <br>
+    <div class="div4"></div>
+    <br>
+    <ul>
+        <li>at 位置：可以是直接指定在某個角(top right)<br>
+            或是位置+參數(top 10px)去進行指定</li>
+    </ul>
+
+    <div class="div5"></div>
+    
+</body>
+</html>
