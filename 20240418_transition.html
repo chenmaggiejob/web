@@ -68,6 +68,10 @@
             transition: left 5s cubic-bezier(0,1.11,1,-0.15);
         }
 
+        .nav {
+            color: #858383;
+        }
+
         .nav::after{
             content: "";
             display: block;
@@ -76,10 +80,15 @@
             background: black;
             transition: width .5s;
             margin: auto; /*下底線會從中間展開*/
+         
         }
 
         .nav:hover::after{
             width: 100%;
+        }
+
+        .nav:hover {
+            color: black;
         }
 
         h1 {
