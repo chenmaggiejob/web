@@ -10,8 +10,34 @@
             width: 100px;
             height: 300px;
             overflow: hidden;
+        }
+
+        .box1 {
+
+            background-position: 150px 150px;
+            /* overflow: hidden; */
+            /* background-size: cover ; */
+            position: absolute;
+        }
+
+        .bbox {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin-top: 20px;
+            /* background-image: url('./images/img8.png'); */
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
             
         }
+
+        .box1>img {
+            /* width: 100px;
+            height: 100px; */
+            position: absolute;
+        }
+
     </style>
 </head>
 <body>
@@ -24,6 +50,10 @@
     <div class="box">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia earum, dolorem nostrum et delectus fuga necessitatibus dicta sapiente repellendus ab reiciendis totam vitae, similique autem neque voluptate quam impedit doloremque!
     </div>
-    
+<div class="bbox">
+    <div class="box1">
+      <img src="https://picsum.photos/id/684/200/100" alt="">
+    </div>
+</div>    
 </body>
 </html>
