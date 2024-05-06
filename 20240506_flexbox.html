@@ -14,7 +14,7 @@
     .container {
       display: flex;
       width: 100%;
-      height: 30vh;
+      height: 50vh;
       background-color: lightcyan;
 
       /* 水平 置中或分散 (分散:space-around) */
@@ -33,16 +33,29 @@
       align-content: center;
       text-align: center;
     }
+
+    .item>img {
+
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .item-hide{
+      opacity: 0%;
+    }
+
   </style>
 </head>
 
 <body>
   <div class="container">
     <div class="item">
-      1
+      <img src="https://picsum.photos/id/684/400/300" alt="">
     </div>
 
-    <div class="item">
+    <!-- item-hide的styele設透明度來隱藏這一個框，讓排版不亂掉 -->
+    <div class="item item-hide"> 
       2
     </div>
 
