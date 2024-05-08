@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 電腦版 */
+        .container {
+            width: 80%;
+            height: 87vh;
+            background-color: gray;
+            padding: 50px;
+            margin: auto;
+
+
+        }
+
+        .flex-container {
+            width: 95%;
+            height: 100%;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            flex-wrap: wrap;
+
+        }
+
+        .item {
+            width: 30%;
+            height: 40%;
+            background-color: blanchedalmond;
+            margin: auto;
+            text-align: center;
+            align-content: center;
+        }
+
+        .item > img {
+            width: 100%;
+            height: 105%;
+        }
+
+        /* 平板 */
+        @media screen and (max-width: 1200px) {
+            .container {
+                background-color: lightblue;
+            }
+
+            .flex-container {
+                background-color: lightseagreen;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .item {
+                background-color: lightpink;
+                width: 45%;
+                height: 15vh;
+                margin: auto;
+                margin-top: 10px;
+
+            }
+
+        }
+        
+        /* 手機版 */
+        @media screen and (max-width: 600px) {
+            .container {
+                background-color: rgb(55, 188, 233);
+            }
+
+            .flex-container {
+                background-color: rgb(58, 151, 147);
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .item {
+                background-color: palevioletred;
+                width: 80%;
+                height: 15%;
+                margin: auto;
+                margin-top: 5px;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="flex-container">
+            <div class="item">
+                <img src="https://picsum.photos/id/22/400/300" alt="">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/id/23/400/300" alt="">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/id/24/400/300" alt="">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/id/25/400/300" alt="">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/id/26/400/300" alt="">
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/id/27/400/300" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
