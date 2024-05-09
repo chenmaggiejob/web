@@ -27,7 +27,8 @@
                     社團介紹
                 </div>
                 <div class="box">
-                    <a href="guitar_history.html">吉他社</a>
+                    <!-- targer 在試題中有要求目標頁在「_top」中開啟，所以要使用targer -->
+                    <a href="guitar_history.html" target="myIframe">吉他社</a>
                 </div>
                 <div class="box">
                     熱舞社
@@ -57,6 +58,10 @@
                 </marquee>
             </div>
             <section class="main-section">
+                <!-- 記得加上 name = myIframe -->
+                <iframe src="./main.html" frameborder="0" name="myIframe">
+
+                </iframe>
 
 
             </section>
