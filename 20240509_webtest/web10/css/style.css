@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header {
+    width: 1024px ;
+    height: 65px;
+    background-color: lightskyblue;
+    margin: auto;
+}
+
+.container {
+
+    width: 1024px ;
+    height: calc(768px - 65px - 25px);
+    background-color: lightblue;
+    margin: auto;
+
+}
+
+.footer {
+
+    width: 1024px ;
+    height: 25px;
+    background-color:aliceblue;
+    margin: auto;
+
+}
