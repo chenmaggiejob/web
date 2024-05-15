@@ -6,13 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="myID" onclick="change()">
+        Hello MyID
+    </div>
 
     <script>
-        console.log('Hello JS: )');
+        const myID = document.getElementById("myID");
+        // myID.textContent = "bbb";
+        
+        function change() {
+            myID.textContent = "CCC";
+            myID.style.color = "red";
+        }
+
+        console.log("aaa",myID);
+
         // var let const
 
         //少用var 多用let const
+
+       
         
     </script>
 </body>
