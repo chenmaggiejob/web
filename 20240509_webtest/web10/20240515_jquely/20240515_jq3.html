@@ -24,10 +24,15 @@
     <p>
         Lorem ipsum dolor sit amet.
     </p>
-<br>
-<p>
-    12345
-</p>
+
+    <button type="button" id="blueBtn">
+        myBtn
+    </button>
+
+    <br>
+    <p>
+        12345
+    </p>
     <script>
         $(document).ready(function () {
 
@@ -35,6 +40,9 @@
                 $(this).css('color', 'red');
             }
             )
+            $('#blueBtn').click(function () {
+                $('p').css('color', 'blue');
+            })
         }
         );
     </script>
