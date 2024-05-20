@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+            border: 3px;
+            margin-top: 10px;
+        }
+
+        .content {
+            width: 608px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div contaier>
+        <div class="content">
+        </div>
+    </div>
+    <div>
+        <button class="black">blackBtn</button>
+        <button class="blue">blueBtn</button>
+        <button class="red">redBtn</button>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+
+        $(".black").click(function () {
+            $(".content").css('background-color', 'black')
+            $(".content").css('color', 'white').text('Good Job')
+        })
+        $(".blue").click(function () {
+            $(".content").css('background-color', 'blue')
+        })
+        $(".red").click(function () {
+            $(".content").css('background-color', 'red')
+        })
+
+
+    })
+</script>
+
+</html>
