@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+            border: 3px;
+            margin-top: 10px;
+        }
+
+        .content {
+            width: 608px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content1 {
+            width: 608PX;
+            height: 30vh;
+            /* background-color: antiquewhite; */
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #imgUrl {
+            width: 608px;
+            height: 30px;
+            /* background-color: lightblue; */
+        }
+
+        #myImg {
+            width: 608px;
+            height: 30vh;
+            /* background-color: lightcoral; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        
+    </div>
+
+    <button id="black" class="myBtn" data-color="red" data-text="BLACK" data-img='18' data-local-img="img2.png">blackBtn</button>
+    <button id="blue" class="myBtn" data-color="white" data-text="BLUE" data-img='19' data-local-img="img3.png">blueBtn</button>
+    <button id="red" class="myBtn" data-color="yellow" data-text="RED" data-img='23' data-local-img="img4.png">redBtn</button>
+    <RED>
+        <div>
+            <div class="content1">
+                <div id="filename">
+                    
+                </div>
+                <div>
+                    <img id="myImg" src="../images/img5.png" alt="">
+                </div>
+
+            </div>
+
+
+        </div>
+        <script>
+            $(document).ready(function () {
+        
+                const blackBtn = $('#black');
+                const blueBtn = $('#blue');
+                const redBtn = $('#red');
+                const changecolor = $('.content');
+                const myBtn = $('.myBtn');
+                const myImg = $('#myImg');
+                myImg.hide();
+        
+        
+                myBtn.click(function () {
+                    
+                    let nowBtn = $(this);
+                    console.log('nowBtn',nowBtn);
+                    let getDataColor = nowBtn.attr('data-color');
+                    let getDataText = nowBtn.attr('data-text');
+                    let getDataImg = nowBtn.attr('data-img');
+                    let getlocalImg = nowBtn.attr('data-local-img');
+                    // let imgurl = `https://picsum.photos/id/${getDataImg}/800/600`;
+                    let imgurl = `../images/${getlocalImg}`;
+                    let filename = $('#filename');
+
+                    console.log('getDataColor',getDataColor);
+                    console.log('getDataText',getDataText);
+                    console.log('getDataImg',getDataImg);
+                    console.log('imgurl',imgurl);
+
+                    
+        
+                    changecolor.css('background-color', nowBtn.attr('id'));
+                    changecolor.css('color', getDataColor);
+                    changecolor.text(getDataText);
+
+                    myImg.attr('src',imgurl);
+                    myImg.show();
+                    filename.text(getlocalImg);
+
+                    
+        
+        
+                    
+        
+        
+        
+        
+                });
+        
+        
+            })
+        
+            // $(document).ready(function () {
+        
+            //     $(".black").click(function () {
+            //         $(".content").css('background-color', 'black')
+            //         $(".content").css('color', 'white').text('Good Job')
+            //     })
+            //     $(".blue").click(function () {
+            //         $(".content").css('background-color', 'blue')
+            //     })
+            //     $(".red").click(function () {
+            //         $(".content").css('background-color', 'red')
+            //     })
+        
+        
+            // })
+        </script>
+</body>
+
+
+
+</html>
