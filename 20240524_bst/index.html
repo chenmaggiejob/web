@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 引入 Bootstrop 的 css 檔案
+    該 css 檔案是使用在元件常用的CSS樣式外觀 -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+</head>
+
+<body>
+    <h1>Bootstrap 斷點</h1>
+    <p>分為六種: 0(xs 不用寫)、576(sm)、 768(md)、 992(lg)、 1200(xl)、 1400(xxl)</p>
+
+    <h1>容器有兩種</h1>
+    <p>固定容器是響應式的，可以隨著斷點去變換它的大小</p>
+
+    <div class="container bg-primary"> container 固定容器 </div>
+    <br>
+    <p>滿版容器是永遠維持 100% 的寬度</p>
+    <div class="container-fluid bg-info"> container-fluid 滿版容器 </div>
+
+    <hr>
+
+    <h1>網格系統</h1>
+    <p>row 是一列 col 是一個欄位 這2個是一組的要一起使用</p>
+    <div class="container">
+        <div class="row">
+            <div class="col bg-danger">
+                Column bg-danger
+            </div>
+            <div class="col bg-success">
+                Column success
+            </div>
+            <div class="col bg-warning">
+                Column bg-warning
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <p>bootstrap 是 12 欄位(等分)的網格系統，col-6 指使用了 6 等分，剩下 6 等分的空間，可以用 col 去圴分</p>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-6">
+                2 of 3 (wider)
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <p>col-5 指使用了 5 等分，剩下 7 等分，因為沒有col-3.5的class，所以只能用 col 去圴分</p>
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-5">
+                2 of 3 (wider)
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h1>可變寬度內容</h1>
+        <p>col-XX-auto 的 auto 指的是內容的寬度，範例是文字 Variable width content 的寬度 </p>
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2 bg-primary">
+                1 of 3
+            </div>
+            <div class="col-lg-auto bg-info">
+                Variable width content
+            </div>
+            <div class="col col-lg-2 bg-primary">
+                3 of 3
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col bg-primary">
+                1 of 3
+            </div>
+            <div class="col-md-auto bg-info">
+                Variable width content
+            </div>
+            <div class="col col-lg-2 bg-success">
+                3 of 3
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <h1>範例</h1>
+        <!-- xs 以上都是 1 欄 -->
+        <div class="row">
+            <div class="col-12 bg-primary">.col-12</div>
+            <div class="col-12 bg-secondary">.col-12</div>
+        </div>
+
+        <br>
+        <!-- md 以上都是 2 欄 -->
+        <div class="row">
+            <div class="col-md-6 bg-primary">col-6</div>
+            <div class="col-md-6 bg-secondary">col-6</div>
+            <div class="col-md-6 bg-primary">col-6</div>
+        </div>
+
+        <br>
+        <!-- xl 以上都是 3 欄 -->
+        <div class="row">
+            <div class="col-xl-4 bg-primary">.col-xl-4</div>
+            <div class="col-xl-4 bg-info">.col-xl-4</div>
+            <div class="col-xl-4 bg-danger">.col-xl-4</div>
+            <div class="col-xl-4 bg-primary">.col-xl-4</div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-xl-4 bg-primary">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 bg-info">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 bg-danger">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 bg-primary">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 bg-info">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 bg-danger">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container">
+            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+            <div class="row">
+              <div class="col-md-8 bg-primary">.col-md-8</div>
+              <div class="col-6 col-md-4 bg-success">.col-6 .col-md-4</div>
+            </div>
+          
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            </div>
+          
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+              <div class="col-6">.col-6</div>
+              <div class="col-6">.col-6</div>
+            </div>
+          </div>
+
+
+          <div class="container">
+            <h1>換行</h1>
+            <p>bootstrap 是 12 欄位網格，如果欄位超過 12 會換行</p>
+            <div class="row">
+                <div class="col-4 bg-primary">.col-4</div>
+                <div class="col-7 bg-success">.col-7</div>
+                <div class="col-2 bg-info">.col-12</div>
+              </div>
+          </div>
+
+    </div>
+
+    <!-- 引入 Bootstrop 的 js檔案 -->
+    <!-- 該 js 檔案是使用在元件的互動功能 -->
+    <script src="./js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
