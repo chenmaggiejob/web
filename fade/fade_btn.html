@@ -14,6 +14,13 @@
             background-color: lightblue;
             display: none;
         }
+
+        .container-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -22,39 +29,52 @@
         <div class="row">
             <div class="col-6">
                 <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-primary btn-block" id="goBtn">GO</button>
+                    <button type="button" class="btn btn-primary btn-block" id="fadeInBtn">fadeIn</button>
                 </div>
             </div>
             <div class="col-6">
                 <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-danger btn-block" id="stopBtn">stop</button>
+                    <button type="button" class="btn btn-danger btn-block" id="fadeOutBtn">fadeOut</button>
                 </div>
             </div>
         </div>
-        <div class="box">
+        <div class="container container-box">
+            <div class="box">
 
+            </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            // 1.綁定
             const box = $('.box');
-            const goBtn = $('#goBtn');
-            const stopBtn = $('#stopBtn');
-            // let goFlag = true;
+            const fadeInBtn = $('#fadeInBtn');
+            const fadeOutBtn = $('#fadeOutBtn');
+            let boxFlag = false;
 
-            goBtn.click(function (e) {
-                // if (!goFlag) {
-                //     return false;
-                // }
-                box.fadeIn(3000);
-                // goFlag = false;
+            // 2.動作
+            fadeInBtn.click(function () {
+                if (boxFlag) {
+                    return false;
+                }
+                console.log('fadeInBtn');
+                box.fadeIn(3000, function () {
+                    console.log('fadeIN ok');
+                    boxFlag = true;
+                });
             });
 
-            stopBtn.click(function (e) {
-                box.fadeOut(3000);
-                // goFlag = true;
+            fadeOutBtn.click(function () {
+                if (!boxFlag) {
+                    return false;
+                }
+                console.log('fadeOutBtn');
+                box.fadeOut(3000, function () {
+                    console.log('fedeOut ok');
+                    boxFlag = false;
+                });
             });
 
         });
