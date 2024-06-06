@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .carousel-item>img {
+      width: 100%;
+      height: 40vh;
+    }
+
+    .tiffany>img {
+      width: 80%;
+      height: 50vh;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/tb1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/tb6.jpg" alt="Chicago" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/tb3.jpg" alt="New York" class="d-block" style="width:100%">
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <div class="container-fluid mt-3">
+    <h3>Tiffany & Co</h3>
+    <p>頂級鑽石權威 — 命定的鑽戒如同Mr. Right，值得精心挑選，以Tiffany永不過時的絕美鑽戒，見證永恆珍藏的甜蜜真愛。經典傳奇設計，搭配創新切工，極致綻放鑽石的璀璨光芒，Tiffany邀您一同鑑賞美鑽風采。 </p>
+  </div>
+
+  <div class="container mt-5"> 
+    <div class="row">
+      <div class="col-4">
+        <div class="container-fluid">
+          <h3>婚戒系列</h3>
+          <p>傾心打造，百年匠心淬鍊完美鑽戒 經典雋永美鑽風采，見證您的真愛傳奇</p>
+        </div>
+      </div>
+      <div class="col-8">
+        <div>
+          <!-- Carousel 2-->
+          <div id="demo2" class="carousel slide w-75 h-50" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo2" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo2" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo2" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item  tiffany active">
+                <img src="./images/t1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item tiffany">
+                <img src="./images/t2.jpg" alt="Chicago" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item tiffany">
+                <img src="./images/t3.jpg" alt="New York" class="d-block" style="width:100%">
+              </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo2" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
