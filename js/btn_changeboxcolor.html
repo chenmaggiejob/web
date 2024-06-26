@@ -23,6 +23,7 @@
                 <button id="redBtn" type="button" class="btn btn-danger"> red </button>
                 <button id="greenBtn" type="button" class="btn btn-success"> green </button>
                 <button id="yelloBtn" type="button" class="btn btn-warning"> yello </button>
+                <button id="testBtn" type="button" class="btn btn-secondary"> test </button>
             </div>
             <div class="row mt-3">
                 <div class="col">
@@ -41,7 +42,7 @@
         const greenBtn = document.getElementById('greenBtn');
         const yelloBtn = document.getElementById('yelloBtn');
         const resultBox = document.getElementById('resultBox');
-
+       
         // 2. 事件 event
         redBtn.addEventListener('click', function () {
             resultBox.setAttribute('class', 'box bg-danger');
@@ -54,6 +55,13 @@
         yelloBtn.addEventListener('click', function () {
             resultBox.setAttribute('class', 'box bg-warning');
         });
+
+        // 延伸， 將綁定與事件寫在一起
+        const testBtn = document.getElementById('testBtn').addEventListener('click',function(){
+            resultBox.setAttribute('class', 'box bg-secondary');
+        })
+
+        
     </script>
 </body>
 
