@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- table 99 -->
+    <h1 class="text-center">table</h1>
+    <table id="cc" class="w-100 text-center">
+    </table>
+    <!-- table 99 end-->
+
+    <!-- container 99 -->
+    <h1 class="text-center mt-5"> container</h1>
+    <div class="container-fluid text-center" id="cc1">
+    </div>
+    <!-- container 99 end-->
+
+    <!-- input     -->
+    <div class="container">
+      
+    </div>
+    <!-- input end -->
+
+
+    <script src="./myjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        //table
+        let rowText = '';
+        for (let i = 1; i <= 9; i++) {
+            // console.log ('i',i);
+            // let tmpText = '';
+            rowText += "<tr>";
+            for (let j = 1; j <= 9; j++) {
+                let iStr = i.toString().padStart(2, '0');
+                let jStr = j.toString().padStart(2, '0');
+                let ijstr = (i * j).toString().padStart(2, '0');
+                // console.log ('j',j);
+                rowText += `<td class='border'> ${iStr} * ${jStr} = ${ijstr} </td> `;
+                // console.log (tempText);
+                // rowText = rowText + tmpText;
+            }
+            rowText += "</tr>";
+            document.getElementById('cc');
+            cc.innerHTML = rowText;
+            // document.getElementById('cc').innerHTML = rowText;
+            // console.log(rowText);
+        }
+
+        //container
+        let rowText1 = '';
+        for (let i = 1; i <= 9; i++) {
+            // console.log ('i',i);
+            rowText1 += '<div class="row">';
+            for (let j = 1; j <= 9; j++) {
+                let iStr = i.toString().padStart(2, '0');
+                let jStr = j.toString().padStart(2, '0');
+                let ijstr = (i * j).toString().padStart(2, '0');
+                // console.log ('j',j);
+                rowText1 += `<div class="col border"> ${iStr} * ${jStr} = ${ijstr} </div> `;
+                // console.log (tempText);
+                // rowText = rowText + tmpText;
+            }
+            rowText1 += "</div>";
+            document.getElementById('cc1');
+            cc1.innerHTML = rowText1;
+            // document.getElementById('cc1').innerHTML = rowText;
+            // console.log(rowText);
+        }
+    </script>
+
+
+</body>
+
+</html>
