@@ -46,19 +46,23 @@
         // 2. 事件 event
         redBtn.addEventListener('click', function () {
             resultBox.setAttribute('class', 'box bg-danger');
+            resultBox.innerText = 'bg color is red';
         });
 
         greenBtn.addEventListener('click', function () {
             resultBox.setAttribute('class', 'box bg-success');
+            resultBox.innerText = 'bg color is green';
         });
 
         yelloBtn.addEventListener('click', function () {
             resultBox.setAttribute('class', 'box bg-warning');
+            resultBox.innerText = 'bg color is yello';
         });
 
         // 延伸， 將綁定與事件寫在一起
         const testBtn = document.getElementById('testBtn').addEventListener('click',function(){
-            resultBox.setAttribute('class', 'box bg-secondary');
+            resultBox.setAttribute('class', 'box bg-secondary')
+            resultBox.innerText = 'this is test text';
         })
 
         
