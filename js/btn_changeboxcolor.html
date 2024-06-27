@@ -42,7 +42,7 @@
         const greenBtn = document.getElementById('greenBtn');
         const yelloBtn = document.getElementById('yelloBtn');
         const resultBox = document.getElementById('resultBox');
-       
+
         // 2. 事件 event
         redBtn.addEventListener('click', function () {
             resultBox.setAttribute('class', 'box bg-danger');
@@ -60,12 +60,12 @@
         });
 
         // 延伸， 將綁定與事件寫在一起
-        const testBtn = document.getElementById('testBtn').addEventListener('click',function(){
+        const testBtn = document.getElementById('testBtn').addEventListener('click', function () {
             resultBox.setAttribute('class', 'box bg-secondary')
             resultBox.innerText = 'this is test text';
         })
 
-        
+
     </script>
 </body>
 
