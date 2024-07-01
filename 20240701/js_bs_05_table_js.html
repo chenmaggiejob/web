@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-
+        .box {
+            width: 100%;
+            height: 30vh;
+            background-color: lightblue;
+        }
     </style>
 </head>
 
@@ -25,43 +27,87 @@
                     <th>name</th>
                     <th>mobile</th>
                     <th>price</th>
+                    <th>level</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="myTbody">
                 <tr>
                     <td>1</td>
                     <td>台北店</td>
                     <td>0911-111-111</td>
                     <td>10000</td>
+                    <td>B</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>台中店</td>
                     <td>0922-222-222</td>
                     <td>50000</td>
+                    <td>B</td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>高雄店</td>
                     <td>0933-333-333</td>
                     <td>100000</td>
+                    <td>S</td>
                 </tr>
-                
-                
+
+
             </tbody>
         </table>
     </div>
 
     <script>
+        // 1.bind
+        const myTbody = document.getElementById('myTbody');
+        console.log('myTbody', myTbody);
+
+        let resultText = ``;
         let data = [
             {
-
+                'id': 1,
+                'name': '台北店',
+                'mobile': '0911-111-111',
+                'price': 10000
             },
-        ]
-        // js foreach
+            {
+                'id': 2,
+                'name': '台中店',
+                'mobile': '0922-222-222',
+                'price': 50000
+            },
+            {
+                'id': 3,
+                'name': '高雄店',
+                'mobile': '0933-333-333',
+                'price': 100000
+            },
+        ];
+        data.forEach(function (value, key) {
+            console.log('key', key);
+            console.log('value', value);
+            // hw1 每個price + 500 丟到table
+            // hw2 100000以上S, 未滿100000 B
 
-        // ajax get data
+            // 客戶等級
+            let tmpLevel = 'B';
+            if ((value['price'] + 500) > 100000) {
+                tmpLevel = 'S'
+            }
 
+            resultText = resultText + `
+                <tr>
+                    <td>${value['id']}</td>
+                    <td>${value['name']}</td>
+                    <td>${value['mobile']}</td>
+                    <td>${value['price'] + 500}</td>
+                    <td>${tmpLevel}</td>
+                </tr>
+            `;
+        });
+        myTbody.innerHTML = resultText;
+        console.log('data', data);
 
     </script>
 </body>
