@@ -71,7 +71,7 @@ include_once "./data.php";
             $.ajax({
                 type: "get",
                 url: url,
-                // data:'data';
+                // data:'data'; 現在是從後端去到前端，所以不用data，從前端去到後端才需要
                 dataType: "json",
                 success: function(res) {
                     let data = res;
