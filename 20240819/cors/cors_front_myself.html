@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>送值給自己</h2>
+        <div class="mb-3 mt-3">
+            <label for="num1" class="form-label">num1:</label>
+            <input type="number" class="form-control" id="num1">
+        </div>
+        <div class="mb-3">
+            <label for="num2" class="form-label">num2:</label>
+            <input type="number" class="form-control" id="num2">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">name:</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="d-grid">
+            <button type="button" onclick="submit()" class="btn btn-primary btn-block">submit</button>
+        </div>
+        <hr>
+        <h2>自己的回應</h2>
+        <div class="mb-3 mt-3">
+            sum : <span id="sum"></span>
+        </div>
+        <div class="mb-3">
+            name : <span id="myname"></span>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <img src="./data.php" alt="" srcset=""> -->
+    <script>
+        url = "http://192.168.211.70:8200/20240819/cors/sum.php"; //自己的
+
+        function submit() {
+            let data = {
+                num1: $("#num1").val(),
+                num2: $("#num2").val(),
+                name: $("#name").val()
+            }
+            $.ajax({
+                type: "get",
+                url: url,
+                data: data,
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+
+                    $("#sum").text(res.sum)
+                    $("#myname").text(res.name)
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
